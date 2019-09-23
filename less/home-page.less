@@ -1,0 +1,83 @@
+html {
+    // background-image: url("https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,c_fit,w_760/https%3A%2F%2Fstorage.googleapis.com%2Fgen-atmedia%2F3%2F2018%2F03%2F55cd28cae8ee78fe1e52ab1adc9eafff24c9af92.jpeg")
+}
+
+body {
+    margin: 0 20px;
+    max-width: 1000px;
+    background-image: url('https://wallpaperaccess.com/full/38589.jpg');
+
+
+    @media (min-width:1040px) {
+        margin: 0 auto;
+    }
+
+    header {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .main {
+        section {
+            background-color: white;
+            border: 5px solid white;
+            border-radius: 4px;
+            margin-bottom: 2%;
+            height: 45rem;
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width:600px) {
+                flex-direction: column;
+                
+            }
+
+            .feature-text {
+                width: 31%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-left: 2%;
+                margin-right: 2%;
+                background-color: white;
+                max-height: 100%;
+
+                @media @mobile {
+                    color: grey;
+                    width: 98%;
+                    height: 100%;
+                    background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1302&q=80');
+                    
+                }
+
+            }
+
+            .two-thirds-img {
+                width: 66%;
+                background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1302&q=80');
+                
+            }
+
+            .one-third.img {
+                width: 32%;
+                margin-top: 2%;
+            }
+
+        }
+        
+        .feature2 {
+            background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+
+            .feature-text {
+                margin-right: 0%;
+                margin-left: 0%;
+                padding-right: 2%;
+                padding-left: 2%;
+            }
+        }
+    }
+}
