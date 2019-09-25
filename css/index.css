@@ -324,7 +324,7 @@ h1 {
   font-size: 10rem;
 }
 h2 {
-  font-size: 6rem;
+  font-size: 5rem;
   padding-bottom: 10px;
   text-align: center;
 }
@@ -347,97 +347,195 @@ img {
   object-fit: contain;
 }
 nav {
-  background-color: white;
   height: 10rem;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+}
+nav .navbar-content {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  /* Overlay */
+  /* Ripple */
+  /* Hover, Focus */
+  /* Active */
+  /* Disabled */
+}
+@media (min-width: 1040px) {
+  nav .navbar-content {
+    margin: 0 auto;
+  }
+}
+nav .navbar-content .links {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  justify-content: space-between;
+}
+nav .navbar-content .links a {
+  text-shadow: 2px 2px 3px black;
+}
+nav .navbar-content .pure-material-button-contained {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  padding: 0 16px;
+  min-width: 64px;
+  height: 36px;
+  vertical-align: middle;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+nav .navbar-content .pure-material-button-contained::-moz-focus-inner {
+  border: none;
+}
+nav .navbar-content .pure-material-button-contained::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+nav .navbar-content .pure-material-button-contained::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  padding: 50%;
+  width: 32px;
+  /* Safari */
+  height: 32px;
+  /* Safari */
+  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 1s, transform 0.5s;
+}
+nav .navbar-content .pure-material-button-contained:hover,
+nav .navbar-content .pure-material-button-contained:focus {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+nav .navbar-content .pure-material-button-contained:hover::before {
+  opacity: 0.08;
+}
+nav .navbar-content .pure-material-button-contained:focus::before {
+  opacity: 0.24;
+}
+nav .navbar-content .pure-material-button-contained:hover:focus::before {
+  opacity: 0.3;
+}
+nav .navbar-content .pure-material-button-contained:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+nav .navbar-content .pure-material-button-contained:active::after {
+  opacity: 0.32;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0s;
+}
+nav .navbar-content .pure-material-button-contained:disabled {
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.12);
+  box-shadow: none;
+  cursor: initial;
+}
+nav .navbar-content .pure-material-button-contained:disabled::before {
+  opacity: 0;
+}
+nav .navbar-content .pure-material-button-contained:disabled::after {
+  opacity: 0;
 }
 nav .logo {
   height: 10rem;
-}
-nav a {
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-nav .login {
-  margin-left: auto;
-  margin-right: 2%;
 }
 footer {
   text-align: center;
   background-color: white;
 }
 body {
-  margin: 0 20px;
-  max-width: 1000px;
   background-image: url('https://wallpaperaccess.com/full/38589.jpg');
 }
+.container {
+  margin: 0 20px;
+  max-width: 1000px;
+}
 @media (min-width: 1040px) {
-  body {
+  .container {
     margin: 0 auto;
   }
 }
-body header {
+.container header {
   margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body .main section {
+.container .main section {
   background-color: white;
   border: 5px solid white;
   border-radius: 4px;
   margin-bottom: 2%;
   height: 45rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1302&q=80');
 }
 @media (max-width: 600px) {
-  body .main section {
-    flex-direction: column;
+  .container .main section {
+    grid-template-columns: 1fr;
   }
 }
-body .main section .feature-text {
-  width: 31%;
+.container .main section .feature-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin: 10% 10%;
   background-color: white;
   max-height: 100%;
 }
 @media (max-width:500px) {
-  body .main section .feature-text {
+  .container .main section .feature-text {
     color: grey;
     width: 98%;
     height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1302&q=80');
+    margin: 0;
+    background-color: transparent;
   }
 }
-body .main section .two-thirds-img {
-  width: 66%;
-  background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1302&q=80');
+.container .main .feature2 .feature-text {
+  grid-column-start: 2;
 }
-body .main section .one-third.img {
-  width: 32%;
-  margin-top: 2%;
-}
-body .main .feature2 {
-  background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-}
-body .main .feature2 .feature-text {
-  margin-right: 0%;
-  margin-left: 0%;
-  padding-right: 2%;
-  padding-left: 2%;
+.container .main .feature3 .feature-text {
+  grid-column-start: 3;
 }
 .main-about {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 @media (max-width: 720px) {
   .main-about {
