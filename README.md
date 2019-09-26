@@ -1,6 +1,6 @@
 # Marketing-Page
 
-##Documentation
+## Documentation
 This project utilizes HTML, LESS, CSS, and a teensy bit of JavaScript to pull member info from the github API (credit to Mr. Sedlacek on the last bit). Hosted on netlify: https://inspiring-stonebraker-d1e680.netlify.com/index.html
 
 ## Proposal
