@@ -421,7 +421,7 @@ nav .navbar-content .pure-material-button-contained {
   text-overflow: ellipsis;
   text-transform: uppercase;
   color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
-  background-color: #134098;
+  background-color: #0D47A1;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
   font-size: 14px;
@@ -442,7 +442,7 @@ nav .navbar-content .pure-material-button-contained::before {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #134098;
+  background-color: #0D47A1;
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -508,7 +508,7 @@ footer {
   color: lightgray;
 }
 body {
-  background-color: #176BCD;
+  background-color: #1976D2;
 }
 .container {
   margin: 0 20px;
@@ -591,7 +591,7 @@ body {
   background-image: url('https://i.imgur.com/Rn4E5MI.png');
   background-repeat: no-repeat;
   background-position: right;
-  background-color: #1a73df;
+  background-color: #1976D2;
   background-position: left;
 }
 .container .main .feature3 .feature-text {
@@ -606,7 +606,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
 }
-@media (max-width: 720px) {
+@media (max-width:720px) {
   .main-about {
     display: flex;
     flex-direction: column;
@@ -617,7 +617,7 @@ body {
   margin: 2%;
   padding: 2%;
 }
-@media (max-width: 720px) {
+@media (max-width:720px) {
   .main-about {
     width: 90%;
     margin: 0 auto;
@@ -630,13 +630,13 @@ body {
 .main-about #members div {
   grid-column-start: span 2;
   margin: 3%;
-  background-color: #134098;
+  background-color: #0D47A1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   margin: 2%;
   padding: 2%;
 }
-@media (max-width: 720px) {
+@media (max-width:720px) {
   .main-about #members div {
     grid-column-start: span 4;
   }

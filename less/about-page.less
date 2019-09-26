@@ -2,7 +2,7 @@
     max-width: 1000px;
     margin: 0 auto;
 
-    @media (max-width:720px) {
+    @media @single-column {
         display: flex;
         flex-direction: column;
     }
@@ -13,7 +13,7 @@
         padding: 2%;
     }
 
-    @media (max-width:720px) {
+    @media @single-column {
         width: 90%;
         margin: 0 auto;
     }
@@ -28,14 +28,13 @@
         div {
             grid-column-start: span 2; 
             margin: 3%;
-            // background-color: #D3D3D3;
             background-color: @button-color;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             border-radius: 10px;
             margin: 2%;
             padding: 2%;
 
-            @media (max-width:720px) {
+            @media @single-column {
                 grid-column-start: span 4;
             }
 
