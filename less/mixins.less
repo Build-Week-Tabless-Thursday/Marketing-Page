@@ -1,0 +1,13 @@
+// Mixins in here
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-img-style(@image-url, @fill-color){
+    background-image: @image-url;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: @fill-color;
+}

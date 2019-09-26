@@ -1,0 +1,92 @@
+
+body {
+    // background-image: url('https://wallpaperaccess.com/full/38589.jpg');
+    background-color: @main-color
+}
+
+.container {
+    margin: 0 20px;
+    max-width: 1000px;
+
+    @media (min-width:1040px) {
+        margin: 0 auto;
+    }
+
+    header {
+        margin-top: 10%;
+        .flex-center();
+        
+    }
+
+    .main {
+        section {
+            background-color: white;
+            border: 5px solid white;
+            border-radius: 4px;
+            margin-bottom: 2%;
+            height: 45rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+            @media (max-width:600px) {
+                grid-template-columns: 1fr;
+                
+            }
+
+            .feature-text {
+                .flex-center();
+                justify-content: center;
+                margin: 10% 10%;
+                padding: 0 3%;
+                background: rgba(255, 255, 255,);
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                max-height: 100%;
+                min-width: 250px;
+
+                @media (max-width: 960px) {
+                    background: rgba(255, 255, 255, .7);
+                }
+
+                @media @mobile {
+                    min-width: 10%;
+                }
+            }
+        }
+
+        .feature1 {
+            .feature-img-style(url('https://i.imgur.com/qNLH8zG.png'), #FBB91D);
+
+            @media (max-width:710px) {
+                background-size: contain;
+            }
+
+        }
+
+        .feature2 {
+            .feature-img-style(url('https://i.imgur.com/7TGYj8U.png'), #F4F2F7);
+
+            .feature-text {
+                grid-column-start: 2;
+
+                @media (max-width: 600px) {
+                    grid-column-start: 1;
+                }
+            }
+        }
+
+        .feature3 {
+
+            .feature-img-style(url('https://i.imgur.com/Rn4E5MI.png'), lighten(#186ACD, 4%));
+            background-position: left;
+
+            .feature-text {
+                grid-column-start: 3;
+            }
+
+            @media (max-width:710px) {
+                background-size: contain;
+            }
+        }
+    }
+}
